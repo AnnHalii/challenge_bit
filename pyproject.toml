@@ -1,0 +1,33 @@
+[build-system]
+requires = [
+    "setuptools>=65",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scrapper"
+authors = [
+    { email = "halii.anna22@gmail.com" },
+]
+readme = "README.md"
+requires-python = ">=3.11"
+version = "0.1.0"
+
+[project.scripts]
+scrapper = "scrapper.scrapper:main"
+
+[tool.setuptools]
+packages = [
+    "scrapper",
+]
+
+[tool.setuptools.dynamic.dependencies]
+file = [
+    "requirements.txt",
+]
+
+[tool.setuptools.package-data]
+"*" = [
+    "**/*",
+]
